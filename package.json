@@ -1,0 +1,25 @@
+{
+  "name": "revSyntax",
+  "displayName": "rev-highlight",
+  "description": "gives revbayes highlight",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "rev",
+      "aliases": ["RevBayes", "rev"],
+      "extensions": [".rev",".Rev"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "rev",
+      "scopeName": "source.rev",
+      "path": "./syntaxes/rev.tmLanguage.json"
+    }]
+  }
+}

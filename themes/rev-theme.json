@@ -1,0 +1,44 @@
+{
+    "name": "Rev Syntax Theme",
+    "type": "dark",
+    "colors": {},
+    "tokenColors": [
+      {
+        "scope": "keyword.control.rev",
+        "settings": { "foreground": "#FF79C6", "fontStyle": "bold" }
+      },
+      {
+        "scope": "string.quoted.double.rev",
+        "settings": { "foreground": "#50FA7B" }
+      },
+      {
+        "scope": "comment.line.double-slash.rev",
+        "settings": { "foreground": "#6272A4", "fontStyle": "italic" }
+      },
+      {
+        "scope": "constant.numeric.rev",
+        "settings": { "foreground": "#BD93F9" }
+      },
+      {
+        "scope": "entity.name.function.rev",
+        "settings": { "foreground": "#FFD700" }
+      },
+      {
+        "scope": "storage.type.rev",
+        "settings": { "foreground": "#00FFFF" }
+      },
+      {
+        "scope": "keyword.operator.rev",
+        "settings": { "foreground": "#FFAA00" }
+      },
+      {
+        "scope": "entity.name.annotation.rev",
+        "settings": { "foreground": "#FF79C6", "fontStyle": "italic" }
+      },
+      {
+        "scope": "constant.special.rev",
+        "settings": { "foreground": "#BD93F9", "fontStyle": "bold" }
+      }
+    ]
+  }
+  
