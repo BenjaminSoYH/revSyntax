@@ -20,6 +20,10 @@
       "language": "rev",
       "scopeName": "source.rev",
       "path": "./syntaxes/rev.tmLanguage.json"
-    }]
+    }],
+    "repository": {
+  "type": "git",
+  "url": "https://github.com/BenjaminSoYH/revSyntax.git"
+}
   }
 }
