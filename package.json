@@ -3,13 +3,36 @@
   "displayName": "rev-highlight",
   "description": "gives revbayes highlight",
   "version": "0.0.1",
+  "publisher": "Benjamin-So",  
+
   "engines": {
-    "vscode": "^1.96.0"
+    "vscode": "^1.93.0"
   },
   "categories": [
     "Programming Languages"
   ],
   "contributes": {
+    "commands": [
+      {
+          "command": "revbayesRunner.runLineOrSelection",
+          "title": "Run RevBayes Line or Selection",
+          "category": "RevBayes"
+      }
+  ],
+  "keybindings": [
+      {
+        "key": "ctrl+shift+alt+b",
+        "command": "runCommands",
+        "args": {
+          "commands": [
+            "workbench.action.terminal.runSelectedText",
+            "cursorDown"
+          ]
+        },
+        "when": "editorTextFocus && !editorReadonly"
+
+      }
+  ],
     "languages": [{
       "id": "rev",
       "aliases": ["RevBayes", "rev"],
