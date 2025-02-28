@@ -1,9 +1,9 @@
 {
   "name": "revSyntax",
-  "displayName": "rev-highlight",
+  "displayName": "Revbayes Syntax Highlight",
   "description": "gives revbayes highlight",
-  "version": "0.0.1",
-  "publisher": "Benjamin-So",  
+  "version": "0.1.0",
+  "publisher": "Benjamin-So",
 
   "engines": {
     "vscode": "^1.93.0"
@@ -12,41 +12,39 @@
     "Programming Languages"
   ],
   "contributes": {
-    "commands": [
+    "keybindings": [
       {
-          "command": "revbayesRunner.runLineOrSelection",
-          "title": "Run RevBayes Line or Selection",
-          "category": "RevBayes"
-      }
-  ],
-  "keybindings": [
-      {
-        "key": "ctrl+shift+alt+b",
-        "command": "runCommands",
-        "args": {
+      "key": "ctrl+enter",
+      "command": "runRevCommands",
+      "args": {
           "commands": [
-            "workbench.action.terminal.runSelectedText",
-            "cursorDown"
+              "workbench.action.terminal.runSelectedText",
+              {
+                  "command": "cursorDown",
+                  "when": "editorHasNoSelection"
+              }
           ]
-        },
-        "when": "editorTextFocus && !editorReadonly"
-
+      },
+      "when": "editorLangId == 'rev'"}
+    ],
+    "languages": [
+      {
+        "id": "rev",
+        "aliases": ["RevBayes", "rev"],
+        "extensions": [".rev", ".Rev"],
+        "configuration": "./language-configuration.json"
       }
-  ],
-    "languages": [{
-      "id": "rev",
-      "aliases": ["RevBayes", "rev"],
-      "extensions": [".rev",".Rev"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "rev",
-      "scopeName": "source.rev",
-      "path": "./syntaxes/rev.tmLanguage.json"
-    }],
-    "repository": {
-  "type": "git",
-  "url": "https://github.com/BenjaminSoYH/revSyntax.git"
-}
+    ],
+    "grammars": [
+      {
+        "language": "rev",
+        "scopeName": "source.rev",
+        "path": "./syntaxes/rev.tmLanguage.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BenjaminSoYH/revSyntax.git"
   }
 }

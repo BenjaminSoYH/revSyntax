@@ -6,4 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- Initial release
+## [0.1.0] - 2025-02-28
+### Added
+- Added to-console shortcut (`ctrl+enter`).
+
+## [0.0.1] - 2025-02-28
+### Added
+- Initial release with color syntax highlighting for RevBayes.
