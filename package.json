@@ -8,25 +8,18 @@
   "engines": {
     "vscode": "^1.93.0"
   },
+  "main": "./src/extension.js",
   "categories": [
     "Programming Languages"
   ],
   "contributes": {
-    "keybindings": [
-      {
+  "keybindings": [
+    {
       "key": "ctrl+enter",
       "command": "runRevCommands",
-      "args": {
-          "commands": [
-              "workbench.action.terminal.runSelectedText",
-              {
-                  "command": "cursorDown",
-                  "when": "editorHasNoSelection"
-              }
-          ]
-      },
-      "when": "editorLangId == 'rev'"}
-    ],
+      "when": "editorLangId == 'rev'"
+    }
+],
     "languages": [
       {
         "id": "rev",
