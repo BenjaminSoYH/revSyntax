@@ -1,28 +1,29 @@
 const vscode = require('vscode');
 
-
 function activate(context) {
   const disposable = vscode.commands.registerCommand('runRevCommands', async () => {
-    await vscode.commands.executeCommand('workbench.action.terminal.runSelectedText');
 
     const editor = vscode.window.activeTextEditor;
     if (!editor) return;
+    await vscode.commands.executeCommand('workbench.action.terminal.runSelectedText');
 
     if (editor.selection.isEmpty) {
       const pos = editor.selection.active;
       const nextLine = pos.line + 1;
-      const newPos = new vscode.Position(nextLine, 0);
-      editor.selection = new vscode.Selection(newPos, newPos);
-      editor.revealRange(new vscode.Range(newPos, newPos));
+
+      if (nextLine < editor.document.lineCount) {
+        const nextLineLength = editor.document.lineAt(nextLine).text.length;
+        const newPos = new vscode.Position(nextLine, nextLineLength);
+        editor.selection = new vscode.Selection(newPos, newPos);;
+        editor.revealRange(new vscode.Range(newPos, newPos));
+      }
     }
   });
 
   context.subscriptions.push(disposable);
 }
 
-function deactivate() {}
 
 module.exports = {
-  activate,
-  deactivate
-};
+  activate
+}

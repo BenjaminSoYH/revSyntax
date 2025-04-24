@@ -22,7 +22,10 @@ You can customize the color theme used for syntax highlighting through Visual St
 
 RevSyntax integrates a "Send to Terminal" functionality, similar to that found in R language support extensions. 
 
-First, run revbayes in a vscode terminal, then you will be able to send highlighted code to the terminal with `Cmd+Enter`
+First, run revbayes in a VScode terminal, then you will be able to send highlighted code to the terminal with (`Ctrl+Enter` or `Cmd+Enter`). 
+
+( Note: The extension can still send code to the terminal even if RevBayes is not running. Make sure you've launched RevBayes to avoid unexpected behavior )
+
 
 ## License
 

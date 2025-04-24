@@ -1,31 +1,39 @@
 {
   "name": "revSyntax",
-  "displayName": "Revbayes Syntax Highlight",
-  "description": "gives revbayes highlight",
-  "version": "0.1.1",
+  "displayName": "RevSyntax",
+  "description": "Language support for RevBayes",
+  "version": "0.1.2",
   "publisher": "Benjamin-So",
-
   "engines": {
     "vscode": "^1.93.0"
   },
   "main": "./src/extension.js",
-  "activationEvents": [ "onLanguage:rev" ],
+  "activationEvents": [
+    "onLanguage:rev"
+  ],
   "categories": [
     "Programming Languages"
   ],
   "contributes": {
-  "keybindings": [
-    {
-      "key": "ctrl+enter",
-      "command": "runRevCommands",
-      "when": "editorLangId == 'rev'"
-    }
-],
+    "keybindings": [
+      {
+        "key": "Ctrl+Enter",
+        "mac": "Cmd+Eneter",
+        "command": "runRevCommands",
+        "when": "editorLangId == 'rev'"
+      }
+    ],
     "languages": [
       {
         "id": "rev",
-        "aliases": ["RevBayes", "rev"],
-        "extensions": [".rev", ".Rev"],
+        "aliases": [
+          "RevBayes",
+          "rev"
+        ],
+        "extensions": [
+          ".rev",
+          ".Rev"
+        ],
         "configuration": "./language-configuration.json"
       }
     ],
