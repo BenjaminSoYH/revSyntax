@@ -1,5 +1,5 @@
 {
-  "name": "revSyntax",
+  "name": "revsyntax",
   "displayName": "RevSyntax",
   "description": "Language support for RevBayes",
   "version": "0.1.2",
@@ -9,7 +9,7 @@
   },
   "main": "./src/extension.js",
   "activationEvents": [
-    "onLanguage:rev"
+    "onLanguage:revbayes"
   ],
   "categories": [
     "Programming Languages"
@@ -18,17 +18,17 @@
     "keybindings": [
       {
         "key": "Ctrl+Enter",
-        "mac": "Cmd+Eneter",
+        "mac": "Cmd+Enter",
         "command": "runRevCommands",
-        "when": "editorLangId == 'rev'"
+        "when": "editorLangId == 'revbayes'"
       }
     ],
     "languages": [
       {
-        "id": "rev",
+        "id": "revbayes",
         "aliases": [
           "RevBayes",
-          "rev"
+          "Rev"
         ],
         "extensions": [
           ".rev",
@@ -39,7 +39,7 @@
     ],
     "grammars": [
       {
-        "language": "rev",
+        "language": "revbayes",
         "scopeName": "source.rev",
         "path": "./syntaxes/rev.tmLanguage.json"
       }

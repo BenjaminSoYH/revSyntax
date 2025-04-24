@@ -24,7 +24,7 @@ RevSyntax integrates a "Send to Terminal" functionality, similar to that found i
 
 First, run revbayes in a VScode terminal, then you will be able to send highlighted code to the terminal with (`Ctrl+Enter` or `Cmd+Enter`). 
 
-( Note: The extension can still send code to the terminal even if RevBayes is not running. Make sure you've launched RevBayes to avoid unexpected behavior )
+( Note: The extension can still send code to the terminal even if RevBayes is not running. Make sure you've launched RevBayes to avoid unexpected behavior )    
 
 
 ## License

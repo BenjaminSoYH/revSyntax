@@ -1,6 +1,8 @@
 const vscode = require('vscode');
 
 function activate(context) {
+
+  
   const disposable = vscode.commands.registerCommand('runRevCommands', async () => {
 
     const editor = vscode.window.activeTextEditor;
